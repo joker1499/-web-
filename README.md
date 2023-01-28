@@ -1,14 +1,11 @@
-# CRUD系统
+# 知网引文爬虫web系统
 
-#### 介绍
-一个基于SSM简单的增删改查系统
+#### 项目简介
+为了实现引文爬取自动化，以满足科研任务需求，由此开发一个web系统方便使用。
 
-#### 软件架构
-前后端不分离项目
-利用jquery,jsp进行前后端交互
-spring + springMVC + Mybatis 三件套
-数据库用的是Mysql 服务器用的是tomcat
-
+#### 技术栈
+服务器端: Gin + Gorm + swagger
+爬虫设计: selenium + htmlquery
 
 #### 使用说明
 菜单页面
