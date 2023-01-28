@@ -1,0 +1,53 @@
+basePath: /api/v1
+host: 127.0.0.1:8080
+info:
+  contact: {}
+paths:
+  /demo:
+    get:
+      consumes:
+      - application/json
+      description: 向你说Hello
+      parameters:
+      - description: 人名
+        in: query
+        name: who
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{"msg": "hello sos"}'
+          schema:
+            type: string
+        "400":
+          description: '{"msg": "who are you"}'
+          schema:
+            type: string
+      summary: 测试SayHello
+      tags:
+      - 测试
+  /file:
+    post:
+      consumes:
+      - multipart/form-data
+      parameters:
+      - description: 随便
+        in: formData
+        name: file
+        required: true
+        type: string
+      - description: 文件
+        in: formData
+        name: other
+        required: true
+        type: file
+      responses:
+        "200":
+          description: '{"msg": "hello sos"}'
+          schema:
+            type: string
+        "400":
+          description: '{"msg": "who are you"}'
+          schema:
+            type: string
+swagger: "2.0"
