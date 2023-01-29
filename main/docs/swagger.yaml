@@ -31,12 +31,12 @@ paths:
       consumes:
       - multipart/form-data
       parameters:
-      - description: 随便
+      - description: 期刊名
         in: formData
-        name: file
+        name: qikan
         required: true
         type: string
-      - description: 文件
+      - description: 要传的文件
         in: formData
         name: other
         required: true
@@ -50,4 +50,6 @@ paths:
           description: '{"msg": "who are you"}'
           schema:
             type: string
+      tags:
+      - 上传文件和目标期刊的接口
 swagger: "2.0"

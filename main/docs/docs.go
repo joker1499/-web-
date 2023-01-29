@@ -56,17 +56,20 @@ const docTemplate = `{
                 "consumes": [
                     "multipart/form-data"
                 ],
+                "tags": [
+                    "上传文件和目标期刊的接口"
+                ],
                 "parameters": [
                     {
                         "type": "string",
-                        "description": "随便",
-                        "name": "file",
+                        "description": "期刊名",
+                        "name": "qikan",
                         "in": "formData",
                         "required": true
                     },
                     {
                         "type": "file",
-                        "description": "文件",
+                        "description": "要传的文件",
                         "name": "other",
                         "in": "formData",
                         "required": true

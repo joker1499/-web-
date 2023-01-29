@@ -14,7 +14,7 @@ type File interface {
 	io.Closer
 }
 
-func Extract(file File) {
+func Extract(file File, qikan string) {
 	defer file.Close()
 
 	r := bufio.NewReader(file)
@@ -30,7 +30,7 @@ func Extract(file File) {
 			break
 		}
 
-		go Fire(data2, "突发公共事件分类、分级与分期")
+		go Fire(data2, qikan)
 		time.Sleep(time.Second)
 	}
 

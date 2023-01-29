@@ -47,15 +47,16 @@ func SayHello(c *gin.Context) {
 }
 
 // upload
+// @Tags 上传文件和目标期刊的接口
 // @Accept mpfd
-// @Param file formData string true "随便"
-// @Param other formData file true "文件"
+// @Param qikan formData string true "期刊名"
+// @Param other formData file true "要传的文件"
 // @Success 200 {string} string "{"msg": "hello sos"}"
 // @Failure 400 {string} string "{"msg": "who are you"}"
 // @Router /file [post]
 func upload(c *gin.Context) {
 
-	file := c.PostForm("file")
+	file := c.PostForm("qikan")
 
 	c.JSON(200, file)
 
@@ -67,7 +68,7 @@ func upload(c *gin.Context) {
 	if err != nil {
 		return
 	}
-	liner.Extract(open)
+	liner.Extract(open, file)
 	err = c.SaveUploadedFile(f, "./files/"+time+f.Filename)
 	if err != nil {
 		return

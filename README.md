@@ -5,21 +5,16 @@
 
 #### 技术栈
 服务器端: Gin + Gorm + swagger
-爬虫设计: selenium + htmlquery
+爬虫: selenium + htmlquery
 
 #### 使用说明
-菜单页面
-![img.png](img.png)
-搜索页面
-![img_1.png](img_1.png)
-录入页面
-![img_2.png](img_2.png)
-登陆页面
-![img_3.png](img_3.png)
-管理员页面
-![img_4.png](img_4.png)
-
+配置好环境后
+登入http://localhost:8080/swagger/index.html,打开Post的下拉框
+![img.png](images/img_1.png)
+期刊名是要收集的期刊
+要传的文件是url集合的txt文件
+完成后execute发送,后台就会开始爬虫
+#### 例子展示
 
 #### 程序架构图
 
-![img_5.png](img_5.png)
