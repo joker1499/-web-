@@ -10,7 +10,7 @@
 #### 使用说明
 配置好环境后
 登入http://localhost:8080/swagger/index.html,打开Post的下拉框
-![img.png](images/img_1.png)
+![img_1.png](images/img_1.png)
 期刊名是要收集的期刊
 要传的文件是url集合的txt文件
 完成后execute发送,后台就会开始爬虫
